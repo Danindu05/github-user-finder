@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Profile Finder</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>GitHub Profile Finder</h2>
+    <input type="text" id="username" placeholder="Enter GitHub username" />
+    <button id="searchBtn">Search</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", fetchUser);
+    document.getElementById("username").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        fetchUser();
+      }
+    });
+
+    async function fetchUser() {
+      const username = document.getElementById("username").value.trim();
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = '<p class="loading">Loading profile...</p>';
+
+      if (!username) {
+        resultDiv.innerHTML = '<p class="error">Please enter a username.</p>';
+        return;
+      }
+
+      try {
+        const res = await fetch(`https://api.github.com/users/${username}`);
+        if (!res.ok) throw new Error("User not found");
+
+        const data = await res.json();
+
+        resultDiv.innerHTML = `
+          <div class="profile-card">
+            <div class="profile-header">
+              <img src="${data.avatar_url}" alt="${data.login} avatar" />
+              <h3>${data.name || data.login}</h3>
+            </div>
+            <a class="view-btn" href="${data.html_url}" target="_blank">
+              <i class="fa-brands fa-github"></i>View GitHub Profile
+            </a>
+          </div>
+        `;
+      } catch (err) {
+        resultDiv.innerHTML = `<p class="error">${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

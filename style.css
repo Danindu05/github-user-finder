@@ -1,0 +1,142 @@
+   * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      padding: 30px;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #c9d1d9;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin-bottom: 12px;
+    }
+
+    input:focus {
+      outline: 2px solid #58a6ff;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: #238636;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #2ea043;
+    }
+
+    .profile-card {
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .profile-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid #30363d;
+      margin-bottom: 10px;
+    }
+
+    .profile-header h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #c9d1d9;
+    }
+
+    .profile-info {
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .profile-info p {
+      margin: 6px 0;
+      font-size: 14px;
+      color: #c9d1d9;
+    }
+
+    .profile-info span {
+      color: #8b949e;
+    }
+
+    .view-btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 16px;
+      background: #21262d;
+      color: #58a6ff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      border: 1px solid #30363d;
+      transition: background 0.2s;
+    }
+
+    .view-btn:hover {
+      background: #30363d;
+    }
+
+    .view-btn i {
+      margin-right: 8px;
+    }
+
+    .error {
+      color: #f85149;
+      margin-top: 15px;
+    }
+
+    .loading {
+      margin-top: 15px;
+      color: #58a6ff;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
