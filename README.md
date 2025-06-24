@@ -9,9 +9,9 @@ A web app that lets you search for a GitHub username and view profile.
 
 ## 🚀 How It Works
 
-- **1. Type a GitHub username**
-- **2. Press **Enter** or click **Search****
-- **3. See profile picture, name, and a link to their GitHub**
+**1. Type a GitHub username**
+**2. Press **Enter** or click **Search****
+**3. See profile picture, name, and a link to their GitHub**
 
 ## 🧰 Built With
 
