@@ -1,4 +1,4 @@
- 🔍 # GitHub User Finder
+#  🔍  GitHub User Finder
 
 A web app that lets you search for a GitHub username and view profile.
 
