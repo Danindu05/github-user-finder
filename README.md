@@ -23,7 +23,7 @@ A web app that lets you search for a GitHub username and view profile.
 - **GitHub REST API**
 
 ## 🚀 Live Demo    
-🔗 [View Website](https://danindu05.github.io/github-user-finder/)
+🔗 [View GitHub Profile Finder Website](https://danindu05.github.io/github-user-finder/)
 
 
 # 💻 Local Development  
